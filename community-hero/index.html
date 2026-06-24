@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script>
+      // Global error handler block to safeguard the web preview inside the sandboxed AI Studio parent iframe
+      window.onerror = function (message, url, line, column, error) {
+        if (message === "Script error." || !message) {
+          console.warn("Caught and muffled sandboxed browser cross-origin script error.");
+          return true; // returning true suppresses the default browser error output/propagation
+        }
+        return false;
+      };
+      window.addEventListener('unhandledrejection', function(event) {
+        if (!event.reason) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

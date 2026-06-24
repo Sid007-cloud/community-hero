@@ -1,0 +1,8 @@
+{
+  "name": "Community Hero",
+  "description": "Help citizens report and track community issues such as potholes, garbage, water leaks, and public safety concerns with automatic AI categorization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
